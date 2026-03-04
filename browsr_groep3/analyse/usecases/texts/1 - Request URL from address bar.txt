@@ -1,0 +1,73 @@
+﻿## Use Case 1: Request URL from address bar
+### Scope: Browsr supports HTML Elements
+### Level: User goal
+### Primary Actor: User of the web browser
+### Stakeholders and Interests:
+- User: Wants an easy to load HTML documents from HTML source and its not allowed to use 
+        any other URL loading libraries.
+ 
+
+### Preconditions:
+- The window contents an address bar and a doucument area.                          
+- Web browser starts with a welcome document that shall be shown in
+  the document area.
+- The URL has not entered into the address bar.
+
+### Success Guarantee (or Postconditions):
+ The documents area shows the HTML document loaded from the URL that  
+ entered into the address bar.
+
+ 
+
+### Main Success Scenario:
+1. User clicks inside the address bar with the left mouse key.
+2. The system indicates that the Address bar has focus, and shows the
+   entire contents of the Address bar as selected. 
+3. The user edits the contents of the Address bar by pressing Backspace,
+  Delete, Left, Right, Home, End, Shift-Left, Shift-Right, Shift-Home,
+  and Shift-End to move the insertion point and select text, and character
+  keys to replace the selection with the entered character or insert the
+  character at the insertion point.
+4. The system shows the updated contents as they are being edited.
+5. The user presses Enter or clicks outside the Address bar to finish editing
+    the contents.  
+6. System loads the page from the URL synchronously via (java.net.URL.openStream). 
+7. System freezes while the page is loading.
+8. The system shows the document in the document area.
+ 
+ 
+
+
+### Extensions (or Alternative Flows):
+1a. The user presses Escape to cancel editing the contents of the Address bar.
+
+	1. The contens are changed back to the value that was active when the Address bar recieved focus.
+
+2a. At any time, user hits the Enter key from the keyboard .
+ 
+         
+        1. System navigates the URL obtained by composing (using the two-argument java.net.URL constructor)
+           the existing URL and the value of the herf attribute of the hyperlink.
+        2. System justifies the contents of  the whole document on left/top. 
+        3. System does not need to break lines of the text that are too long to fit on one line.
+        
+3b. System shows Tables according to with some rules.
+
+        1. System shows the column of the table with the width that according to the maximum of the widths of cells
+           in that column  
+        2. System shows the row of the table with the height that according to the maximum of the heights of the cells
+           in that rows
+
+        3. System justifies the contents of the cell on left/top.
+
+3c. In case of an error parsing the URL or an error loading/parsing the document.
+
+          1. System shows error document in the document area.
+          
+        
+
+	
+
+
+
+ 

@@ -1,0 +1,70 @@
+﻿## Use Case 3: Interact with the address bar
+### Scope: Browsr supports HTML Elements
+### Level: User goal
+### Primary Actor: User of the web browser
+### Stakeholders and Interests:
+- User: Wants an easy to click with the left mouse key or to type/put characters with the keyboard
+        inside the address bar.
+ 
+
+### Preconditions:
+- The window contents an address bar and a doucument area.                          
+- Web browser starts with a welcome document that shall be shown in
+  the document area.
+- The URL has not entered yet into the address bar.
+
+### Success Guarantee (or Postconditions):
+ The documents area shows the HTML document loaded from the URL 
+ entered into the address bar.
+
+ 
+
+### Main Success Scenario:
+
+1. User moves the mouse cursor over the address bar in the window,click inside the
+   address bar with the left mouse key and then enter the URL. 
+2. User types characters on an area of the address bar using keyboard. 
+3. User presses Enter or clicks outside the address bar to end editing the address bar 
+4. System loads the page from the URL synchronously via (java.net.URL.openStream). 
+5. System shows document in document area 
+ 
+ 
+
+
+### Extensions (or Alternative Flows):
+ 
+
+1a. When the user clicks inside the address bar with the left mouse key.  
+          
+	
+        1. The text cursor appears in the address bar .
+        2. The address bar receives the keyboard foucus afterward.
+
+
+	
+2b. User types characters on an area of the address bar using keyboard
+        ,when the area of the address bar is not empty.
+          
+	  1. All text is initially selected with a blue background.
+          2. The selected text replaces with the characters.
+
+2c. User types characters on an area of the address bar using keyboard
+        ,when the area of the address bar is empty. 
+
+          1. The text cursor appears in the address bar .
+          2. The address bar receives the keyboard foucus afterward.
+
+3d. User hits the Enter key or clicks outside the address bar .
+          
+          1. The address bar loses the focus.
+          2. System navigates the URL given by the contents of the address bar.
+
+3e. User hits the Escape key from the keyboard.
+
+          1. The address bar loses the focus. 
+          2. System restores the text that was present before the address bar gained keyboard focus. 
+
+4f. In case of an error parsing the URL or an error parsing the document.
+
+          1. Show error document in document area.
+    

@@ -1,0 +1,85 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>51</x><y>195</y><w>100</w><h>40</h></coordinates><panel_attributes>/ContentSpan/
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1</x><y>285</y><w>110</w><h>50</h></coordinates><panel_attributes>Table
+--
+-rows: TableRow[]
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>321</x><y>285</y><w>100</w><h>50</h></coordinates><panel_attributes>TextSpan
+--
+-text:String
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>141</x><y>205</y><w>240</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;220;10;220;80</additional_attributes></element><element><id>Relation</id><coordinates><x>141</x><y>215</y><w>50</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;30;10;30;70</additional_attributes></element><element><id>Relation</id><coordinates><x>51</x><y>225</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>285</y><w>100</w><h>60</h></coordinates><panel_attributes>Hyperlink
+--
+-href:String
+-text: TextSpan
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>305</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>425</y><w>100</w><h>60</h></coordinates><panel_attributes>TableRow
+--
+-cells: TableCell[]
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>415</y><w>160</w><h>60</h></coordinates><panel_attributes>TableCell
+--
+-content: ContentSpan
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>325</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>425</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>195</y><w>400</w><h>270</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;380;10;380;250;200;250</additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>395</y><w>100</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Collector
+--
+--
++collect()
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>135</y><w>170</w><h>60</h></coordinates><panel_attributes>ContentSpanCollector
+--
+-collection: ContentSpan[]
+--
++collect()
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>185</y><w>30</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;210;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>155</y><w>520</w><h>60</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;40;10;10;500;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>868</x><y>135</y><w>200</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Validator
+--
+--
++validate(content: ContentSpan)
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>315</y><w>210</w><h>80</h></coordinates><panel_attributes>BrowsrDocValidator
+--
+-collector: Collector
+-lexer: HtmlLexer
+--
++validate(content: ContentSpan)
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>675</y><w>120</w><h>60</h></coordinates><panel_attributes>Controller
+--
+-facade: Facade
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>930</x><y>205</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>345</y><w>140</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;70;90;70;10;120;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>204</x><y>525</y><w>150</w><h>60</h></coordinates><panel_attributes>Facade
+--
+-requester: Requestor
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1090</x><y>443</y><w>100</w><h>30</h></coordinates><panel_attributes>HtmlLexer
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1040</x><y>323</y><w>70</w><h>160</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;140;30;140;30;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>493</y><w>130</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Requestor
+--
+--
++request()
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>493</y><w>160</w><h>90</h></coordinates><panel_attributes>UrlRequestor
+--
+-url: String
+-validator: Validator
+--
++request()
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>523</y><w>190</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;170;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1010</x><y>163</y><w>230</w><h>400</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>60;10;210;10;210;380;10;380</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>533</y><w>250</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>230;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>575</y><w>160</w><h>140</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;120;140;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>675</y><w>120</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Observer
+--
+--
++update()
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>735</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>725</y><w>170</w><h>150</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;130;150;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>725</y><w>240</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Subject
+--
+--
++register(observer: Observer)
++unregister(observer: Observer)
++notifyObservers()
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>925</y><w>190</w><h>100</h></coordinates><panel_attributes>UIComponent
+--
+-parent: Observer
+--
++register(observer: Observer)
++unregister(observer: Observer)
++notifyObservers()
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>825</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>875</y><w>300</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;120;90;120;10;280;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>1075</y><w>100</w><h>30</h></coordinates><panel_attributes>AddressBar
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>1075</y><w>100</w><h>30</h></coordinates><panel_attributes>DocumentArea
+bg=red
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>1015</y><w>90</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70;70;70</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>1015</y><w>120</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;100;70;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>815</y><w>170</w><h>90</h></coordinates><panel_attributes>UI
+--
+-controller: Controller
+-subjects: UIComponent[]
+--
++update()
+bg=red</panel_attributes><additional_attributes></additional_attributes></element></diagram>

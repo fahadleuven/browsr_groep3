@@ -1,0 +1,45 @@
+﻿## Use Case 2: Click on a hyperlink
+### Scope: Browsr supports HTML Elements
+### Level: User goal
+### Primary Actor: User of the web browser
+### Stakeholders and Interests:
+- User: Wants an easy to click on the hyperlink and to see the contents 
+        that corresponding to this hyperlink.
+ 
+
+### Preconditions:
+- The window contents an address bar and a doucument area.                          
+- Web browser starts with a welcome document that shall be shown in
+  the document area.
+- The URL has not entered into the address bar.
+
+### Success Guarantee (or Postconditions):
+ The documents area shows the hyperlinks in blue color and underlined.
+
+ 
+
+### Main Success Scenario:
+
+1. User moves the mouse cursor over the hyperlink in the documents area,click on it 
+   with the left mouse key. 
+2. System navigates the URL obtained by composing (using the two-argument java.net.URL constructor)
+   the existing URL and the value of the herf attribute of the hyperlink.
+3. System loads the page from the URL synchronously via (java.net.URL.openStream). 
+4. system freezes while the page is loading. #nodig?
+5. System shows document in document area and updates the address bar.
+ 
+ 
+
+
+### Extensions (or Alternative Flows):
+1a. At any time, user clicks the hyperlink with error document.
+ 
+        1. System shows the feedback to user in the doucument area.
+        2. System can reset.
+
+2-3b. In case of an error parsing the URL or an error parsing the document.
+
+          1. System shows error document inside the document area.
+          
+
+ 
